@@ -93,7 +93,7 @@ def scan(urlx):
             r5 = requests.head(url=url3,headers=headers,timeout=5)
             print r5.url + ' : ' + str(r5.status_code) + ' : ' + str(r5.headers["Content-Length"])
             try:
-                if int(r5.headers["Content-Length"]) > 18888:
+                if int(r5.headers["Content-Length"]) > 188888:
                     with open('backup.txt','a+')as aaa:
                         aaa.write(url3 + '\n')
                 else:
@@ -110,7 +110,7 @@ def scan(urlx):
             r6 = requests.head(url=url4,headers=headers,timeout=5)
             print r6.url + " : " + str(r6.status_code) + ' : ' + str(r6.headers["Content-Length"])
             try:
-                if int(r6.headers["Content-Length"]) > 18888:
+                if int(r6.headers["Content-Length"]) > 188888:
                     with open('backup.txt','a+')as aaa:
                         aaa.write(url4 + '\n')
                 else:
