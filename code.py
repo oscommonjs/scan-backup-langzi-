@@ -79,11 +79,11 @@ def scan(urlx):
                 else:
                     pass
             except Exception,e:
-                print e
+                pass
         else:
             pass
     except Exception,e:
-        print e
+        pass
     url_3 = urlx + '/' + urlx.split(".",2)[1]
     for x in houzui:
         url3 = url_3 + str(x)
@@ -101,7 +101,7 @@ def scan(urlx):
             except Exception,e:
                 pass
         except Exception,e:
-            print e
+            pass
     for x in list_rar:
         url4 = urlx + x.replace('\n','')
         try:
@@ -116,9 +116,9 @@ def scan(urlx):
                 else:
                     pass
             except Exception,e:
-                print e
+                pass
         except Exception,e:
-            print e
+            pass
     url5 = urlx + '/WEB-INF/web.xml'
     try:
         UA = random.choice(headerss)
@@ -134,11 +134,11 @@ def scan(urlx):
                 else:
                     pass
             except Exception,e:
-                print e
+                pass
         else:
             pass
     except Exception,e:
-        print e
+        pass
 
 smxc = int(input(unicode('设置扫描线程数(10-500):','utf-8').encode('gbk')))
 url_list=list(set([i.replace("\n","") for i in open("url.txt","r").readlines()]))
