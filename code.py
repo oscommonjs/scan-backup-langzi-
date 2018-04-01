@@ -59,7 +59,7 @@ def scan(urlx):
                 else:
                     pass
             except Exception,e:
-                print pass
+                pass
         else:
             pass
     except Exception,e:
@@ -73,7 +73,6 @@ def scan(urlx):
         if r3.status_code == 200:
             try:
                 r4 = requests.get(url=url2,headers=headers,timeout=5)
-                print r4.content
                 if 'repositoryformatversion' in r4.content:
                     with open('git.txt','a+')as aa:
                         aa.write(url2 + '\n')
